@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 
 function BookSession() {
   return (
-    <div className="flex flex-col min-h-[100dvh]">
-      {/* <main className="flex-1"> */}
+    <div className="flex flex-col min-h-[100vh] overflow-hidden">
         <section className="w-full flex justify-center items-center gap-10 pt-12 md:pt-24 lg:pt-32">
           <div className="p-4 md:px-6 space-y-10 xl:space-y-16 ">
             <div className="w-full flex justify-center items-center gap-4 px-4 sm:px-6 md:px-10 md:grid-cols-2 md:gap-16">
