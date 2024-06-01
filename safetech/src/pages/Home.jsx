@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Offers from '../components/Offers'
 import Cover from '../components/Cover'
+import Partners from '../components/Partners'
+import Footer from '../components/Footer'
 
 export const Home = () => {
   return (
@@ -15,11 +17,13 @@ export const Home = () => {
       </Link>
       </div>
       <div>
-        <img className='object-cover p-4 md:w-[48vw] rounded-3xl' src="/assets/main.webp" alt="" />
+        <img className='object-cover px-4 md:w-[48vw] rounded-3xl' src="/assets/main.webp" alt="" />
       </div>
     </div>
     <Offers/>
     <Cover/>
+    <Partners/>
+    <Footer/>
     </>
   )
 }

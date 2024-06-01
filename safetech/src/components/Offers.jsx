@@ -12,7 +12,10 @@ function Offers() {
             className="w-full max-w-4xl flex flex-col md:flex-row gap-6 items-center justify-between bg-white shadow-2xl rounded-2xl p-6 transform transition-transform hover:scale-105"
             key={idx}
           >
-            <div className="p-4 font-bold text-3xl flex-1">{offer.title}</div>
+            <div className="flex justify-center items-center flex-col gap-6 p-4 font-bold text-3xl flex-1 text-center">
+              <img className='w-32' src={offer.src}alt="" />
+              <span>{offer.title}</span>
+            </div>
             <div className="w-full md:w-2/5 flex justify-center items-center h-40 p-4 text-center border-t md:border-t-0 md:border-l border-gray-300">{offer.content}</div>
           </div>
         ))
