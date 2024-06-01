@@ -22,7 +22,7 @@ export const Navbar = () => {
       <div className={`hidden md:flex items-center space-x-8 mr-10`}>
         <Link to='/services'>Services</Link>
         <Link to='/about'>Portfolio</Link>
-        <Link to='/contact'>Blog</Link>
+        <Link to='/blog'>Blog</Link>
         <Link to='/contact'>Contact</Link>
         <Link className='px-4 py-2 bg-black text-white rounded-2xl' to='/contact'><button>Book a Session</button></Link>
         <Link className='px-4 py-2 bg-black text-white rounded-2xl' to='/login'><button>Login</button></Link>
@@ -42,7 +42,7 @@ export const Navbar = () => {
         <div className="flex justify-center items-center flex-col gap-8 py-4 md:hidden absolute top-16 left-0 right-0 bg-gray-200">
           <Link to='/services'>Services</Link>
         <Link to='/about'>Portfolio</Link>
-        <Link to='/contact'>Blog</Link>
+        <Link to='/blog'>Blog</Link>
         <Link to='/contact'>Contact</Link>
         <Link className='px-4 py-2 bg-black text-white rounded-2xl' to='/contact'><button>Book a Session</button></Link>
         <Link className='px-4 py-2 bg-black text-white rounded-2xl' to='/login'><button>Login</button></Link>
