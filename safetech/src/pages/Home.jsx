@@ -5,6 +5,7 @@ import Cover from '../components/Cover'
 import Partners from '../components/Partners'
 import Footer from '../components/Footer'
 import BookSession from './BookSession'
+import Blog from './Blog'
 
 export const Home = () => {
   return (
@@ -25,6 +26,7 @@ export const Home = () => {
     <Cover/>
     <Partners/>
     <BookSession/>
+    <Blog/>
     <Footer/>
     </>
   )

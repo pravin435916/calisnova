@@ -4,7 +4,7 @@ const LoginSignup = () => {
   const [signIn, setSignIn] = useState(true);
 
   return (
-    <div className="bg-gray-200 min-h-screen flex items-center justify-center">
+    <div className="bg-gray-200 h-[89vh] flex items-center justify-center">
       <div className="bg-white shadow-md rounded-lg overflow-hidden w-full max-w-lg">
         <div className="flex justify-between items-center px-6 py-4">
           <h2 className="text-lg font-semibold text-gray-800">

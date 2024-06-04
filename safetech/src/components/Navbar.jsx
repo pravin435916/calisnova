@@ -24,7 +24,7 @@ export const Navbar = () => {
         <Link to='/about'>Portfolio</Link>
         <Link to='/blog'>Blog</Link>
         <Link to='/contact'>Contact</Link>
-        <Link className='px-4 py-2 bg-black text-white rounded-2xl' to='/contact'><button>Book a Session</button></Link>
+        <Link className='px-4 py-2 bg-black text-white rounded-2xl' to='/book'><button>Book a Session</button></Link>
         <Link className='px-4 py-2 bg-black text-white rounded-2xl' to='/login'><button>Login</button></Link>
       </div>
 
@@ -44,7 +44,7 @@ export const Navbar = () => {
         <Link to='/about'>Portfolio</Link>
         <Link to='/blog'>Blog</Link>
         <Link to='/contact'>Contact</Link>
-        <Link className='px-4 py-2 bg-black text-white rounded-2xl' to='/contact'><button>Book a Session</button></Link>
+        <Link className='px-4 py-2 bg-black text-white rounded-2xl' to='/book'><button>Book a Session</button></Link>
         <Link className='px-4 py-2 bg-black text-white rounded-2xl' to='/login'><button>Login</button></Link>
         </div>
       )}
