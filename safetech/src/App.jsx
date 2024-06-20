@@ -6,6 +6,7 @@ import Blog from './pages/Blog'
 import Footer from './components/Footer'
 import LoginSignup from './pages/LoginSignup'
 import BookSession from './pages/BookSession'
+import Contact from './components/Contact'
 function App() {
   return (
     <BrowserRouter>
@@ -15,6 +16,7 @@ function App() {
         <Route path='/blog' element={<Blog />} />
         <Route path='/book' element={<BookSession />} />
         <Route path='/login' element={<LoginSignup />} />
+        <Route path='/contact' element={<Contact />} />
       </Routes>
     </BrowserRouter>
   )

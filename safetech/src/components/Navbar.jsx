@@ -1,3 +1,4 @@
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -25,7 +26,13 @@ export const Navbar = () => {
         <Link to='/blog'>Blog</Link>
         <Link to='/contact'>Contact</Link>
         <Link className='px-4 py-2 bg-black text-white rounded-2xl' to='/book'><button>Book a Session</button></Link>
-        <Link className='px-4 py-2 bg-black text-white rounded-2xl' to='/login'><button>Login</button></Link>
+        <SignedOut>
+        <SignInButton className='px-4 py-2 bg-black text-white rounded-2xl' />
+      </SignedOut>
+      <SignedIn>
+        <UserButton />
+      </SignedIn>
+        {/* <Link className='px-4 py-2 bg-black text-white rounded-2xl' to='/login'><button>Login</button></Link> */}
       </div>
 
       {/* Hamburger menu for small screens */}
