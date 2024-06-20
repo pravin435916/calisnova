@@ -54,9 +54,9 @@ function Blog() {
                 <span>•</span>
                 <span>{blog.date}</span>
               </div>
-              <p className="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+              <p className="text-gray-700">{blog.content}</p>
               <button
-                className="mt-4 inline-flex items-center px-4 py-2 bg-blue-500 text-white text-sm font-medium rounded-md hover:bg-blue-700"
+                className="mt-4 inline-flex items-center px-4 py-2 bg-black text-white text-sm font-medium rounded-md"
                 onClick={() => openModal(blog)}
               >
                 Read More

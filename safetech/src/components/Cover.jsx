@@ -8,8 +8,6 @@ function Cover() {
     return (
         <Swiper
             slidesPerView={1}
-            onSlideChange={() => console.log('slide change')}
-            onSwiper={(swiper) => console.log(swiper)}
             autoplay={{
                 delay: 3000, // Delay between transitions in ms
                 disableOnInteraction: false, // Enable autoplay even after user interaction

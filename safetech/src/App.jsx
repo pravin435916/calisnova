@@ -7,6 +7,8 @@ import Footer from './components/Footer'
 import LoginSignup from './pages/LoginSignup'
 import BookSession from './pages/BookSession'
 import Contact from './components/Contact'
+import Partners from './components/Partners'
+import Offers from './components/Offers'
 function App() {
   return (
     <BrowserRouter>
@@ -15,7 +17,8 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/blog' element={<Blog />} />
         <Route path='/book' element={<BookSession />} />
-        <Route path='/login' element={<LoginSignup />} />
+        <Route path='/partners' element={<Partners />} />
+        <Route path='/offers' element={<Offers />} />
         <Route path='/contact' element={<Contact />} />
       </Routes>
     </BrowserRouter>

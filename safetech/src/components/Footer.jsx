@@ -1,4 +1,5 @@
 import React from 'react';
+import Contact from './Contact';
 
 function Footer() {
   return (
@@ -8,7 +9,7 @@ function Footer() {
         <div>
           <h3 className="text-lg font-bold mb-4">Let’s Work Together</h3>
           <p><strong>Phone:</strong> 9067098016</p>
-          <p><strong>Email:</strong> skillspace7@gmail.com</p>
+          <p><strong>Email:</strong> safetech.ceo@gmail.com</p>
           <p><strong>Address:</strong></p>
           <p>Nagpur, Maharashtra, India</p>
         </div>
@@ -26,7 +27,7 @@ function Footer() {
             />
             <button
               type="submit"
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              className="bg-black text-white font-bold py-2 px-4 rounded"
             >
               SUBSCRIBE
             </button>
@@ -36,7 +37,7 @@ function Footer() {
         {/* Third Column */}
         <div>
           <h3 className="text-lg font-bold mb-4">Stay in Touch</h3>
-          <form className="flex flex-col space-y-2">
+          {/* <form className="flex flex-col space-y-2">
             <label htmlFor="firstName" className="sr-only">First Name</label>
             <input
               type="text"
@@ -78,7 +79,8 @@ function Footer() {
             >
               SUBMIT
             </button>
-          </form>
+          </form> */}
+          <Contact/>
         </div>
       </div>
     </div>
