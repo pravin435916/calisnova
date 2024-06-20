@@ -9,12 +9,14 @@ import BookSession from './pages/BookSession'
 import Contact from './components/Contact'
 import Partners from './components/Partners'
 import Offers from './components/Offers'
+import Error404 from './pages/Error404'
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/*' element={<Error404 />} />
         <Route path='/blog' element={<Blog />} />
         <Route path='/book' element={<BookSession />} />
         <Route path='/partners' element={<Partners />} />

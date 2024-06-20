@@ -7,6 +7,7 @@ function BookSession() {
   const { user } = useUser();
   const [showPopup, setShowPopup] = useState(false);
   const [mobileNumber, setMobileNumber] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false); // State to track form submission
 
   const openPopup = () => {
     setShowPopup(true);
@@ -22,17 +23,21 @@ function BookSession() {
 
   const sendBookEmail = async (e) => {
     e.preventDefault();
-    if(mobileNumber.length != 10) {
-      toast.error('Mobile Number is Invalid (10 digit)');
+    if (mobileNumber.length !== 10) {
+      toast.error('Mobile Number is Invalid (10 digits)');
       return;
     }
+
+    // Start submitting, disable button
+    setIsSubmitting(true);
+
     const form = {
       name: user?.fullName,
       email: user?.emailAddresses[0]?.emailAddress, // Replace with dynamic data if needed
       mobile: mobileNumber,
       message: 'I would like to book a session for the Digital Literacy Workshop.'
     };
-    console.log(form.email);
+
     try {
       const response = await emailjs.send(
         'service_bv48nt9', // Replace with your service ID
@@ -45,6 +50,9 @@ function BookSession() {
     } catch (error) {
       console.log('Admin Notification Email FAILED...', error);
       toast.error('Email FAILED');
+    } finally {
+      // Reset form state after submission completes
+      setIsSubmitting(false);
     }
   };
 
@@ -149,9 +157,10 @@ function BookSession() {
                   <div className="flex justify-end">
                     <button
                       type="submit"
-                      className="inline-flex h-10 items-center justify-center rounded-md bg-black text-white px-8 text-sm font-medium shadow transition-colors"
+                      disabled={isSubmitting} // Disable button while submitting
+                      className={`inline-flex h-10 items-center justify-center rounded-md bg-black text-white px-8 text-sm font-medium shadow transition-colors ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
                     >
-                      Submit
+                      {isSubmitting ? 'Submitting...' : 'Submit'}
                     </button>
                     <button
                       type="button"
