@@ -12,7 +12,7 @@ function Partners() {
 
     return (
         <>
-            <div className='w-full my-10'>
+            <div className='w-full my-10 '>
                 <h1 className='text-center text-5xl font-bold'>Our Partners</h1>
                 <div className='w-full flex justify-center items-center gap-10 my-8 flex-wrap'>
                     {

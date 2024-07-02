@@ -12,18 +12,21 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="p-4 flex items-center justify-between">
+    <nav className="p-4 flex items-center justify-between shadow-xl">
       {/* Left side logo */}
       <div className="flex items-center gap-4">
-        <img className='w-12 h-12' src="/assets/logo.webp" alt="" />
+        <img className='w-12 h-12' src="/assets/logo.png" alt="" />
         <span className="text-2xl font-bold">SafeTech India</span>
       </div>
 
       {/* Right side navigation */}
-      <div className={`hidden md:flex items-center space-x-8 mr-10`}>
+      <div className={`hidden md:flex items-center space-x-8 mr-10 `}>
         <Link className="focus:text-blue-400 hover:text-blue-400" to='/'>Home</Link>
         <Link className="focus:text-blue-400 hover:text-blue-400" to='/offers'>Offers</Link>
         <Link className="focus:text-blue-400 hover:text-blue-400" to='/partners'>Partners</Link>
+        <SignedIn>
+          <Link className="focus:text-blue-400 hover:text-blue-400" to='/material'>Materials</Link>
+        </SignedIn>
         <Link className="focus:text-blue-400 hover:text-blue-400" to='/blog'>Blog</Link>
         <Link className="focus:text-blue-400 hover:text-blue-400" to='/contact'>Contact</Link>
         <Link className='px-4 py-2 bg-black text-white rounded-2xl' to='/book'><button>Book a Session</button></Link>
@@ -51,6 +54,9 @@ export const Navbar = () => {
           <Link onClick={toggleMenu} to='/'>Home</Link>
           <Link onClick={toggleMenu} to='/offers'>Offers</Link>
           <Link onClick={toggleMenu} to='/partners'>Partners</Link>
+          <SignedIn>
+            <Link className="focus:text-blue-400 hover:text-blue-400" to='/material'>Materials</Link>
+          </SignedIn>
           <Link onClick={toggleMenu} to='/blog'>Blog</Link>
           <Link onClick={toggleMenu} to='/contact'>Contact</Link>
           <Link onClick={toggleMenu} className='px-4 py-2 bg-black text-white rounded-2xl' to='/book'><button>Book a Session</button></Link>

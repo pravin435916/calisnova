@@ -13,7 +13,7 @@ function Cover() {
                 disableOnInteraction: false, // Enable autoplay even after user interaction
             }}
             modules={[Autoplay]}
-            className='flex md:flex-row flex-col my-8'
+            className='flex md:flex-row flex-col my-8 '
         >
             <SwiperSlide className='flex md:flex-row flex-col justify-center items-center md:gap-14 w-full cursor-grab '>
                 <div className='md:w-[20%] mx-8  flex flex-col md:gap-8 text-center justify-center items-center'>

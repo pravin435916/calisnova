@@ -10,6 +10,7 @@ import Contact from './components/Contact'
 import Partners from './components/Partners'
 import Offers from './components/Offers'
 import Error404 from './pages/Error404'
+import { Material } from './components/Material'
 function App() {
   return (
     <BrowserRouter>
@@ -18,6 +19,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/*' element={<Error404 />} />
         <Route path='/blog' element={<Blog />} />
+        <Route path='/material' element={<Material />} />
         <Route path='/book' element={<BookSession />} />
         <Route path='/partners' element={<Partners />} />
         <Route path='/offers' element={<Offers />} />

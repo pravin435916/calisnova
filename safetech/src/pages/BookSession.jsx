@@ -37,9 +37,16 @@ function BookSession() {
       mobile: mobileNumber,
       message: 'I would like to book a session for the Digital Literacy Workshop.'
     };
+    const form2 = {
+      name: user?.fullName,
+      email: user?.emailAddresses[0]?.emailAddress, // Replace with dynamic data if needed
+      // mobile: mobileNumber,
+      // message: 'I would like to book a session for the Digital Literacy Workshop.'
+    };
 
     try {
-      const response = await emailjs.send(
+      // Send booking email
+      await emailjs.send(
         'service_bv48nt9', // Replace with your service ID
         'template_pho98o9', // Replace with your admin notification template ID
         form,
@@ -47,9 +54,18 @@ function BookSession() {
       );
       toast.success('Wait for admin call');
       closePopup(); // Close the popup on success
+
+      // Send thank you email
+      await emailjs.send(
+        'service_njsxbyh', // Replace with your service ID
+        'template_xuhfz3b', // Replace with your thank you email template ID
+        form2,
+        'HN1dqDeT0BuX3JY1C' // Your public key from EmailJS
+      );
+      toast.success('Thank You Email SUCCESS!');
     } catch (error) {
-      console.log('Admin Notification Email FAILED...', error);
-      toast.error('Email FAILED');
+      console.log('Email sending failed...', error);
+      toast.error('Email sending failed');
     } finally {
       // Reset form state after submission completes
       setIsSubmitting(false);
@@ -57,8 +73,8 @@ function BookSession() {
   };
 
   return (
-    <div className="flex flex-col min-h-[100vh] overflow-hidden">
-      <section className="w-full flex justify-center items-center gap-10 pt-12 md:pt-24 lg:pt-32">
+    <div className="flex flex-col  min-h-[100vh] overflow-hidden ">
+      <section className="bg-[#ffe4f1] box pb-8 w-full flex justify-center items-center gap-10 pt-12 md:pt-24 lg:pt-32">
         <div className="p-4 md:px-6 space-y-10 xl:space-y-16 ">
           <div className="w-full flex justify-center items-center gap-4 px-4 sm:px-6 md:px-10 md:grid-cols-2 md:gap-16">
             <div className='flex flex-col gap-4'>
