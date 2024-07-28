@@ -23,7 +23,7 @@ export const Home = () => {
         >
           <motion.img 
             className='w-40 md:w-96 hidden md:flex' 
-            src="/assets/logo.webp" 
+            src="/assets/logo1.png" 
             alt="" 
             variants={fadeIn}
           />

@@ -14,9 +14,9 @@ export const Navbar = () => {
   return (
     <nav className="p-4 flex items-center justify-between shadow-xl">
       {/* Left side logo */}
-      <div className="flex items-center gap-4">
-        <img className='w-12 h-12' src="/assets/logo.png" alt="" />
-        <span className="text-2xl font-bold">SafeTech India</span>
+      <div className="flex items-center gap-2">
+        <img className='w-12 h-12' src="/assets/logo1.png" alt="" />
+        <span className="text-2xl font-bold font-serif">CALISNOVA</span>
       </div>
 
       {/* Right side navigation */}
